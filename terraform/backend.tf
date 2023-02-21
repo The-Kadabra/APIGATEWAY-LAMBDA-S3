@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "remote-state" {
-  bucket = format("tfstate-%s-%s-5080", var.project, var.environment) #${data.aws_caller_identity.current.account_id}
-
+  bucket = format("tfstate-%s-%s-5080", var.project, var.environment)
   versioning {
     enabled = true
   }

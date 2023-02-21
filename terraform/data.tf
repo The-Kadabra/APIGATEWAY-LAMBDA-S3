@@ -74,11 +74,11 @@ data "aws_iam_policy_document" "role"{
 #Data Subnet - Consumindo de app #
 ##################################
 data "aws_subnet" "subnet_app" {
-    count     = length(var.vpc_subnet) #ajustar o valor
+    count     = length(var.vpc_subnet)
         filter {
             name    = "tag:Name"
             values  = [
-                element(var.vpc_subnet, count.index)#ajustar o valor
+                element(var.vpc_subnet, count.index)
         ]
     }
 }

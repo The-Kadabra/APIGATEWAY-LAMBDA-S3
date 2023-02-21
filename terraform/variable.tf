@@ -32,7 +32,7 @@ variable "environment" {
 #########
 variable "filename" {
     type    = string
-    default = "/home/gabriel.pires/Documentos/gabriel/projeto_apigtw/python/app.zip"
+    default = "../../projeto_apigtw/python/app.zip" #TESTAR LINK SIMBOLICO
 }
 variable "handler" {
     type    = string
