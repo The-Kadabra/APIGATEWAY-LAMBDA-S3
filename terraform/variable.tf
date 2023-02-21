@@ -30,9 +30,9 @@ variable "environment" {
 #########
 #LAMBDA #
 #########
-/*variable "filename" {
+variable "filename" {
     type    = string
-    default = "/home/gabriel.pires/Documentos/gabriel/python/app/app.zip"
+    default = "/home/gabriel.pires/Documentos/gabriel/projeto_apigtw/python/app.zip"
 }
 variable "handler" {
     type    = string
@@ -50,26 +50,26 @@ variable "runtime" {
 }
 variable "timeout" {
     type    = number
-    default = 900
+    default = 10
 }
 variable "memory_size" {
     default = "512"
-}*/
+}
 
 ############
 #MODULE-VPC#
 ############
 
 variable "private_subnet_suffix" {
-    description = "Nome que se pretende dar a essa SUBNET"
-    type        = string
-    default     = "private"
+  description = "Nome que se pretende dar a essa SUBNET"
+  type        = string
+  default     = "private"
 }
 
 variable "public_subnet_suffix" {
-    description = "Nome que se pretende dar a essa SUBNET"
-    type        = string
-    default     = "public"
+  description = "Nome que se pretende dar a essa SUBNET"
+  type        = string
+  default     = "public"
 }
 
 
@@ -79,6 +79,5 @@ variable "public_subnet_suffix" {
 
 variable "vpc_subnet" {
   description = "lista das subnets"
-  type        = list(string)
-  default     = ["microservices-private-us-east-1a","microservices-private-us-east-1b"]
+  default     = ["microservices-private-us-east-1a", "microservices-private-us-east-1b"]
 }
