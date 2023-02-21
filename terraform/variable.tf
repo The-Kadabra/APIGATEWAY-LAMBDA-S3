@@ -31,29 +31,29 @@ variable "environment" {
 #LAMBDA #
 #########
 variable "filename" {
-    type    = string
-    default = "../../projeto_apigtw/python/app.zip" #TESTAR LINK SIMBOLICO
+  type    = string
+  default = "../../projeto_apigtw/python/app.zip" #TESTAR LINK SIMBOLICO
 }
 variable "handler" {
-    type    = string
-    default = "app.lambda_handler"
-    #O valor do prefixo do nome precisa ser o mesmo do ponto de execução do seu python. No nosso contexto ficaria app.lambda_handler o valor .lambda_handler deve sempre existir caso contrario não vai funcionar
+  type    = string
+  default = "app.lambda_handler"
+  #O valor do prefixo do nome precisa ser o mesmo do ponto de execução do seu python. No nosso contexto ficaria app.lambda_handler o valor .lambda_handler deve sempre existir caso contrario não vai funcionar
 
 }
 variable "description" {
-    type    = string
-    default = "https://github.com/The-Kadabra/AWS-Lambda-Python-Boto3"
+  type    = string
+  default = "https://github.com/The-Kadabra/APIGATEWAY-LAMBDA-S3"
 }
 variable "runtime" {
-    type    = string
-    default = "python3.9"
+  type    = string
+  default = "python3.9"
 }
 variable "timeout" {
-    type    = number
-    default = 10
+  type    = number
+  default = 10
 }
 variable "memory_size" {
-    default = "512"
+  default = "512"
 }
 
 ############
