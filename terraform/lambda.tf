@@ -23,3 +23,14 @@ resource "aws_lambda_function" "main" {
     module.vpc
   ]
 }
+
+################
+#TRIGGER-LAMBDA#
+################
+#OS ESTUDOS PARAM AQUI. PRECISO ENTENDER COMO REALIZAR A INTEGRAÇÃO ENTRE APIGTW E LAMBDA
+resource "aws_apigatewayv2_integration" "this" {
+  api_id                              = module.api_gateway.apigatewayv2_api_id
+  integration_type                    = "AWS_PROXY"
+  integration_method                  = "GET"
+  integration_uri                     = resource.aws_lambda_function.main.invoke_arn
+}
